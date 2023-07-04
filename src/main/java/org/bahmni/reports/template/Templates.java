@@ -45,8 +45,11 @@ public class Templates {
     public static final StyleBuilder rootStyle;
     public static final StyleBuilder boldStyle;
     public static final StyleBuilder italicStyle;
+    public static final StyleBuilder normalCenteredStyle;
     public static final StyleBuilder boldCenteredStyle;
+    public static final StyleBuilder normal12CenteredStyle;
     public static final StyleBuilder bold12CenteredStyle;
+    public static final StyleBuilder normal18CenteredStyle;
     public static final StyleBuilder bold18CenteredStyle;
     public static final StyleBuilder bold22CenteredStyle;
     public static final StyleBuilder columnStyle;
@@ -66,9 +69,15 @@ public class Templates {
         rootStyle = stl.style().setPadding(2);
         boldStyle = stl.style(rootStyle).bold();
         italicStyle = stl.style(rootStyle).italic();
+        normalCenteredStyle = stl.style(rootStyle)
+                .setAlignment(HorizontalAlignment.CENTER, VerticalAlignment.MIDDLE);
         boldCenteredStyle = stl.style(boldStyle)
                 .setAlignment(HorizontalAlignment.CENTER, VerticalAlignment.MIDDLE);
+        normal12CenteredStyle = stl.style(normalCenteredStyle)
+                .setFontSize(12);
         bold12CenteredStyle = stl.style(boldCenteredStyle)
+                .setFontSize(12);
+        normal18CenteredStyle = stl.style(normalCenteredStyle)
                 .setFontSize(12);
         bold18CenteredStyle = stl.style(boldCenteredStyle)
                 .setFontSize(18);

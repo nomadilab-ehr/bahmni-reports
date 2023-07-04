@@ -15,9 +15,16 @@ public class ReportHeader {
     public JasperReportBuilder add(JasperReportBuilder jasperReportBuilder, String reportName, String startDate, String endDate) {
         HorizontalListBuilder headerList = cmp.horizontalList();
 
-        addTitle("Custom Header", headerList);
-
         addTitle(reportName, headerList);
+
+        addVerticalGap(headerList);
+
+        addInfoTitle("Facilty: ", "Waberi Health Center", headerList);
+
+        addInfoHeader("Region: ", "Benadir Region", headerList);
+        addInfoHeader("District: ", "Waberi District", headerList);
+
+        addVerticalGap(headerList);
 
         addDatesSubHeader(startDate, endDate, headerList);
 
@@ -33,6 +40,30 @@ public class ReportHeader {
     private void addVerticalGap(HorizontalListBuilder headerList) {
         headerList.add(cmp.line())
                 .add(cmp.verticalGap(10));
+    }
+
+    private void addInfoHeader(String label, String text, HorizontalListBuilder headerList) {
+        headerList.add(cmp.text(label)
+                .setStyle(Templates.normal12CenteredStyle)
+                .setHorizontalAlignment(HorizontalAlignment.CENTER));
+        
+        headerList.add(cmp.text(text)
+                .setStyle(Templates.bold12CenteredStyle)
+                .setHorizontalAlignment(HorizontalAlignment.CENTER))
+                .newRow()
+                .add(cmp.verticalGap(5));
+    }
+
+    private void addInfoTitle(String label, String text, HorizontalListBuilder headerList) {
+        headerList.add(cmp.text(label)
+                .setStyle(Templates.normal18CenteredStyle)
+                .setHorizontalAlignment(HorizontalAlignment.CENTER));
+        
+        headerList.add(cmp.text(text)
+                .setStyle(Templates.bold18CenteredStyle)
+                .setHorizontalAlignment(HorizontalAlignment.CENTER))
+                .newRow()
+                .add(cmp.verticalGap(5));
     }
 
     private void addTitle(String reportName, HorizontalListBuilder headerList) {
