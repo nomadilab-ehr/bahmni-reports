@@ -15,6 +15,8 @@ public class ReportHeader {
     public JasperReportBuilder add(JasperReportBuilder jasperReportBuilder, String reportName, String startDate, String endDate) {
         HorizontalListBuilder headerList = cmp.horizontalList();
 
+        addTitle("Custom Header", headerList);
+
         addTitle(reportName, headerList);
 
         addDatesSubHeader(startDate, endDate, headerList);
