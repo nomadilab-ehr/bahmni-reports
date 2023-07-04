@@ -19,10 +19,10 @@ public class ReportHeader {
 
         addVerticalGap(headerList);
 
-        addInfoTitle("Facilty: ", "Waberi Health Center", headerList);
+        addInfoTitle("Facilty: Waberi Health Center", headerList);
 
-        addInfoHeader("Region: ", "Benadir Region", headerList);
-        addInfoHeader("District: ", "Waberi District", headerList);
+        addInfoHeader("Region: Benadir Region", headerList);
+        addInfoHeader("District: Waberi District", headerList);
 
         addVerticalGap(headerList);
 
@@ -42,11 +42,7 @@ public class ReportHeader {
                 .add(cmp.verticalGap(10));
     }
 
-    private void addInfoHeader(String label, String text, HorizontalListBuilder headerList) {
-        headerList.add(cmp.text(label)
-                .setStyle(Templates.normal12CenteredStyle)
-                .setHorizontalAlignment(HorizontalAlignment.CENTER));
-        
+    private void addInfoHeader(String text, HorizontalListBuilder headerList) {
         headerList.add(cmp.text(text)
                 .setStyle(Templates.bold12CenteredStyle)
                 .setHorizontalAlignment(HorizontalAlignment.CENTER))
@@ -54,11 +50,7 @@ public class ReportHeader {
                 .add(cmp.verticalGap(5));
     }
 
-    private void addInfoTitle(String label, String text, HorizontalListBuilder headerList) {
-        headerList.add(cmp.text(label)
-                .setStyle(Templates.normal18CenteredStyle)
-                .setHorizontalAlignment(HorizontalAlignment.CENTER));
-        
+    private void addInfoTitle(String text, HorizontalListBuilder headerList) {
         headerList.add(cmp.text(text)
                 .setStyle(Templates.bold18CenteredStyle)
                 .setHorizontalAlignment(HorizontalAlignment.CENTER))
