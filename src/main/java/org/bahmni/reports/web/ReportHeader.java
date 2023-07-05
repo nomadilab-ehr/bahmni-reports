@@ -2,7 +2,6 @@ package org.bahmni.reports.web;
 
 import net.sf.dynamicreports.jasper.builder.JasperReportBuilder;
 import net.sf.dynamicreports.report.builder.component.HorizontalListBuilder;
-import com.vaadin.ui.TableBuilder;
 import net.sf.dynamicreports.report.constant.HorizontalAlignment;
 import org.bahmni.reports.template.Templates;
 
