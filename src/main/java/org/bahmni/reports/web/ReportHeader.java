@@ -19,6 +19,20 @@ public class ReportHeader {
 
         addVerticalGap(headerList);
 
+        // Create a table with two columns and three rows
+        TableBuilder table = cmp.table();
+        table.columns(2);
+        table.rows(3);
+
+        table.addRow("Row 1", "Row 2", "Row 3", false);
+        table.addRow("Row 4", "Row 5");
+        table.addRow("Row 6", "Row 7");
+
+        // Add the table to the header list
+        headerList.add(table);
+
+        addVerticalGap(headerList);
+
         addInfoTitle("Facilty: Waberi Health Center", headerList);
 
         addInfoHeader("Region: Benadir Region", headerList);
