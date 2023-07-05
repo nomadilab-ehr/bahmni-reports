@@ -43,7 +43,7 @@ public class ReportHeader {
         return jasperReportBuilder;
     }
 
-    private void addVerticalGap(HorizontalListBuilder headerList, Integer gap = 10) {
+    private void addVerticalGap(HorizontalListBuilder headerList, int gap = 10) {
         headerList.add(cmp.verticalGap(gap));
     }
 
