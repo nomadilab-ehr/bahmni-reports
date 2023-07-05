@@ -2,6 +2,7 @@ package org.bahmni.reports.web;
 
 import net.sf.dynamicreports.jasper.builder.JasperReportBuilder;
 import net.sf.dynamicreports.report.builder.component.HorizontalListBuilder;
+import com.vaadin.ui.TableBuilder;
 import net.sf.dynamicreports.report.constant.HorizontalAlignment;
 import org.bahmni.reports.template.Templates;
 
@@ -19,26 +20,17 @@ public class ReportHeader {
 
         addVerticalGap(headerList);
 
-        // Create a table with two columns and three rows
-        TableBuilder table = cmp.table();
-        table.columns(2);
-        table.rows(3);
-
-        table.addRow("Row 1", "Row 2", "Row 3", false);
-        table.addRow("Row 4", "Row 5");
-        table.addRow("Row 6", "Row 7");
-
-        // Add the table to the header list
-        headerList.add(table);
-
-        addVerticalGap(headerList);
-
         addInfoTitle("Facilty: Waberi Health Center", headerList);
 
+        addInfoHeader("MFL Code: 0-00-000-000", headerList);
         addInfoHeader("Region: Benadir Region", headerList);
         addInfoHeader("District: Waberi District", headerList);
 
-        addVerticalGap(headerList);
+        addVerticalGap(headerList, 5);
+
+        addInfoHeader("Version: July 2023", headerList);
+
+        addVerticalGap(headerList, 15);
 
         addDatesSubHeader(startDate, endDate, headerList);
 
@@ -51,9 +43,8 @@ public class ReportHeader {
         return jasperReportBuilder;
     }
 
-    private void addVerticalGap(HorizontalListBuilder headerList) {
-        headerList.add(cmp.line())
-                .add(cmp.verticalGap(10));
+    private void addVerticalGap(HorizontalListBuilder headerList, Integer gap = 10) {
+        headerList.add(cmp.verticalGap(gap));
     }
 
     private void addInfoHeader(String text, HorizontalListBuilder headerList) {
