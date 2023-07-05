@@ -18,7 +18,7 @@ public class ReportHeader {
 
         addTitle(reportName, headerList);
 
-        addVerticalGap(headerList);
+        addVerticalGap(headerList, 10);
 
         addInfoTitle("Facilty: Waberi Health Center", headerList);
 
@@ -36,14 +36,14 @@ public class ReportHeader {
 
         addReportGeneratedDateSubHeader(headerList);
 
-        addVerticalGap(headerList);
+        addVerticalGap(headerList, 10);
 
         jasperReportBuilder.addTitle(headerList);
 
         return jasperReportBuilder;
     }
 
-    private void addVerticalGap(HorizontalListBuilder headerList, int gap = 10) {
+    private void addVerticalGap(HorizontalListBuilder headerList, int gap) {
         headerList.add(cmp.verticalGap(gap));
     }
 
