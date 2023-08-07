@@ -19,3 +19,8 @@ openerp.password=${ODOO_DB_PASSWORD}
 bahmnireports.db.url=jdbc:mysql://${REPORTS_DB_SERVER}:3306/${REPORTS_DB_NAME}?allowMultiQueries=true
 reports.save.directory=/home/bahmni/reports/
 bahmni.login.url=/bahmni/home/#/login?showLoginMessage
+facility.name='Waberi Health Center'
+facility.code='0-00-000-000'
+facility.region='Benadir Region'
+facility.district='Waberi District'
+report.version='August 2023'

@@ -31,6 +31,26 @@ public class BahmniReportsProperties {
         }
     }
 
+    public String getFacilityName() {
+        return props.getProperty("facility.name");
+    }
+
+    public String getFacilityCode() {
+        return props.getProperty("facility.code");
+    }
+
+    public String getFacilityRegion() {
+        return props.getProperty("facility.region");
+    }
+
+    public String getFacilityDistrict() {
+        return props.getProperty("facility.district");
+    }
+
+    public String getReportVersion() {
+        return props.getProperty("report.version");
+    }
+
     public String getConfigFileUrl() {
         return props.getProperty("reports.config.url");
     }

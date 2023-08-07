@@ -4,6 +4,7 @@ import net.sf.dynamicreports.jasper.builder.JasperReportBuilder;
 import net.sf.dynamicreports.report.builder.component.HorizontalListBuilder;
 import net.sf.dynamicreports.report.constant.HorizontalAlignment;
 import org.bahmni.reports.template.Templates;
+import org.bahmni.reports.BahmniReportsProperties;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,23 +12,26 @@ import java.util.Date;
 import static net.sf.dynamicreports.report.builder.DynamicReports.cmp;
 
 public class ReportHeader {
+    private BahmniReportsProperties bahmniReportsProperties;
 
     public JasperReportBuilder add(JasperReportBuilder jasperReportBuilder, String reportName, String startDate, String endDate) {
+        bahmniReportsProperties = new BahmniReportsProperties("bahmni-reports-test.properties");
+
         HorizontalListBuilder headerList = cmp.horizontalList();
 
         addTitle(reportName, headerList);
 
         addVerticalGap(headerList, 10);
 
-        addTitle("Facilty: Waberi Health Center", headerList);
+        addTitle("Facilty: " + bahmniReportsProperties.getFacilityName(), headerList);
 
-        addInfoHeader("MFL Code: 0-00-000-000", headerList);
-        addInfoHeader("Region: Benadir Region", headerList);
-        addInfoHeader("District: Waberi District", headerList);
+        addInfoHeader("MFL Code: " + bahmniReportsProperties.getFacilityCode(), headerList);
+        addInfoHeader("Region: " + bahmniReportsProperties.getFacilityRegion(), headerList);
+        addInfoHeader("District: " + bahmniReportsProperties.getFacilityDistrict(), headerList);
 
         addVerticalGap(headerList, 5);
 
-        addInfoHeader("Version: July 2023", headerList);
+        addInfoHeader("Version: " + bahmniReportsProperties.getReportVersion(), headerList);
 
         addVerticalGap(headerList, 15);
 
