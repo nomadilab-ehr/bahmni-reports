@@ -19,7 +19,7 @@ public class ReportHeader {
 
         addVerticalGap(headerList, 10);
 
-        addInfoTitle("Facilty: Waberi Health Center", headerList);
+        addTitle("Facilty: Waberi Health Center", headerList);
 
         addInfoHeader("MFL Code: 0-00-000-000", headerList);
         addInfoHeader("Region: Benadir Region", headerList);
