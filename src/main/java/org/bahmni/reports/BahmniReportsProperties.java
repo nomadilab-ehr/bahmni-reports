@@ -43,6 +43,10 @@ public class BahmniReportsProperties {
         return props.getProperty("facility.region");
     }
 
+    public String getFacilityState() {
+        return props.getProperty("facility.state");
+    }
+
     public String getFacilityDistrict() {
         return props.getProperty("facility.district");
     }

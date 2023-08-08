@@ -21,6 +21,7 @@ reports.save.directory=/home/bahmni/reports/
 bahmni.login.url=/bahmni/home/#/login?showLoginMessage
 facility.name=Waberi Health Center
 facility.code=0-00-000-000
+facility.state=Benadir
 facility.region=Benadir
 facility.district=Waberi
 report.version=August 2023
