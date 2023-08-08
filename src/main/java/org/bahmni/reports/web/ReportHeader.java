@@ -26,8 +26,8 @@ public class ReportHeader {
         addTitle("Facilty: " + bahmniReportsProperties.getFacilityName(), headerList);
 
         addInfoHeader("MFL Code: " + bahmniReportsProperties.getFacilityCode(), headerList);
-        addInfoHeader("Region: " + bahmniReportsProperties.getFacilityRegion(), headerList);
         addInfoHeader("State: " + bahmniReportsProperties.getFacilityState(), headerList);
+        addInfoHeader("Region: " + bahmniReportsProperties.getFacilityRegion(), headerList);
         addInfoHeader("District: " + bahmniReportsProperties.getFacilityDistrict(), headerList);
 
         addVerticalGap(headerList, 5);
