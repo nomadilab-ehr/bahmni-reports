@@ -15,7 +15,7 @@ public class ReportHeader {
     private BahmniReportsProperties bahmniReportsProperties;
 
     public JasperReportBuilder add(JasperReportBuilder jasperReportBuilder, String reportName, String startDate, String endDate) {
-        bahmniReportsProperties = new BahmniReportsProperties("bahmni-reports-test.properties");
+        bahmniReportsProperties = new BahmniReportsProperties("bahmni-reports.properties");
 
         HorizontalListBuilder headerList = cmp.horizontalList();
 
